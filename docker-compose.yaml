@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  frontend:
+    container_name: aal-frontend
+    image: aal-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BASE_URL: ${BASE_URL}
+        NEXT_PUBLIC_BASE_URL_API: ${NEXT_PUBLIC_BASE_URL_API}
+    restart: always
+    ports:
+      - "3005:3000"

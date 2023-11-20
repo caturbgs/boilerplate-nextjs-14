@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "next"
+  ],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/jsx-curly-brace-presence": ["warn"]
+  }
 }
